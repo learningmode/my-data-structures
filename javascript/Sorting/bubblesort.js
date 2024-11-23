@@ -7,6 +7,8 @@ function bubbleSort(arr) {
 	  swap = true; // Initially assume no swaps have occurred
 	  
 	  // Inner loop: This compares adjacent elements and swaps them if necessary
+	  // The range of the inner loop is reduced after each pass (arr.length - i - 1) 
+	  // because after each outer loop pass, the largest element moves to its correct position at the end of the array.
 	  for (let j = 0; j < arr.length - i - 1; j++) {
 		
 		// If the current element is greater than the next element, swap them
